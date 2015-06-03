@@ -6,5 +6,6 @@ my_stack.o:my_stack.c
 	gcc -c my_stack.c
 
 clean:
-	rm result
-	rm *.o
+	if [ -e result ]; then rm result; fi
+	if [ -e main.o ]; then rm main.o; fi
+	if [ -e my_stack.o ]; then rm my_stack.o; fi
